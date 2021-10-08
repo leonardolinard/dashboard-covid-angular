@@ -1,0 +1,44 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h4>
+                Atualize as informações sobre leitos ocupados em sua cidade nos campos abaixo:
+            </h4>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-5 mr-auto ml-auto">
+            <div>
+                <form #formDados="ngForm">
+                    <div class="form-group row">
+                        <label for="junho" class="col-md-2 col-form-label">Junho:</label>
+                        <input type="number" name="junho" id="junho" class="form-control col-md-10" min="0"
+                            [(ngModel)]="junho">
+                    </div>
+                    <div class="form-group row">
+                        <label for="julho" class="col-md-2 col-form-label">Julho:</label>
+                        <input type="number" name="julho" id="julho" class="form-control col-md-10" min="0"
+                            [(ngModel)]="julho">
+                    </div>
+                    <div class="form-group row">
+                        <label for="agosto" class="col-md-2 col-form-label">Agosto:</label>
+                        <input type="number" name="agosto" id="agosto" class="form-control col-md-10" min="0"
+                            [(ngModel)]="agosto">
+                    </div>
+                    <div class="form-group row">
+                        <label for="setembro" class="col-md-2 col-form-label">Setembro:</label>
+                        <input type="number" name="setembro" id="setembro" class="form-control col-md-10" min="0"
+                            [(ngModel)]="setembro">
+                    </div>
+                    <div class="text-center mt-5">
+                        <button class="btn btn-primary" (click)="dadosInputs()">Atualizar Dados</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-5 mr-auto ml-auto">
+            <div id="line_chart"></div>
+        </div>
+    </div>
+</div>
